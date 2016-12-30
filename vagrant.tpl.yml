@@ -1,0 +1,6 @@
+---
+
+# Rename this file to vagrant.yml and provide Vagrant directory mounts.
+
+osp_sync_code: null
+osp_sync_data: null
