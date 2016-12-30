@@ -1,0 +1,23 @@
+---
+
+dependencies:
+
+  - role: supervisor
+
+    supervisor_programs:
+
+      - name: producer
+        command: >
+          {{ osp_src_dir }}/env/bin/python
+          {{ osp_src_dir }}/osp/producer.py
+
+      - name: consumer
+
+        command: >
+          {{ osp_src_dir }}/env/bin/python
+          {{ osp_src_dir }}/osp/consumer.py
+
+        numprocs: 4
+
+        config:
+          autostart: True
