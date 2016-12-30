@@ -1,0 +1,10 @@
+---
+
+- name: Deploy the master
+  become: yes
+
+  hosts:
+    - tag_osp_cluster-master
+
+  roles:
+    - osp

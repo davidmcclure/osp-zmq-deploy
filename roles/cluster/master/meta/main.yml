@@ -1,0 +1,12 @@
+---
+
+dependencies:
+
+  - role: ec2-instance
+
+    ec2_name: cluster-master
+    ec2_tag: cluster-master
+
+    ec2_instance_type: c4.8xlarge
+
+    ec2_group: osp-cluster

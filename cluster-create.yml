@@ -1,0 +1,10 @@
+---
+
+- name: Provision master node
+  hosts: localhost
+
+  vars_files:
+    - vars/ec2.vault.yml
+
+  roles:
+    - cluster/master
