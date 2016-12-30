@@ -1,0 +1,9 @@
+---
+
+- name: Deploy to Vagrant
+  become: yes
+
+  hosts: server
+
+  roles:
+    - osp
