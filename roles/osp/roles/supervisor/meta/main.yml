@@ -17,7 +17,6 @@ dependencies:
           {{ osp_src_dir }}/env/bin/python
           {{ osp_src_dir }}/osp/consumer.py
 
-        # TODO: Handle with multiprocessing in code?
         numprocs: 4
 
         config:
