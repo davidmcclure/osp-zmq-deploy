@@ -7,4 +7,5 @@
     - vars/ec2.vault.yml
 
   roles:
-    - cluster/master
+    - cluster/server
+    - cluster/worker
