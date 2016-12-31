@@ -4,3 +4,6 @@ osp_repo: https://github.com/davidmcclure/osp-zmq.git
 osp_branch: master
 
 osp_src_dir: /opt/osp
+
+osp_config:
+  zmq_host: localhost

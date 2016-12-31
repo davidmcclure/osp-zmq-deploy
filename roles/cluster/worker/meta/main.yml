@@ -8,6 +8,6 @@ dependencies:
     ec2_tag: cluster-worker
 
     ec2_instance_type: c4.8xlarge
-    ec2_instance_count: 10
+    ec2_instance_count: 3
 
     ec2_group: osp-cluster
