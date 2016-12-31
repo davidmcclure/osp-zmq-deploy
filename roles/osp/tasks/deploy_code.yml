@@ -6,12 +6,12 @@
     version: '{{ osp_branch }}'
     dest: '{{ osp_src_dir }}'
 
-- name: Set source code permissions
-  file:
-    path: '{{ osp_src_dir }}'
-    group: '{{ ansible_ssh_user }}'
-    owner: '{{ ansible_ssh_user }}'
-    recurse: yes
+#- name: Set source code permissions
+  #file:
+    #path: '{{ osp_src_dir }}'
+    #group: '{{ ansible_ssh_user }}'
+    #owner: '{{ ansible_ssh_user }}'
+    #recurse: yes
 
 - name: Check if a virtualenv exists
   register: env
@@ -32,5 +32,10 @@
 
 - name: Install pip dependencies
   command: env/bin/pip install -r requirements.txt
+  args:
+    chdir: '{{ osp_src_dir }}'
+
+- name: Install the package
+  command: env/bin/python3 setup.py install
   args:
     chdir: '{{ osp_src_dir }}'
