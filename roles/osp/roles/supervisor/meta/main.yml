@@ -9,13 +9,13 @@ dependencies:
       - name: producer
         command: >
           {{ osp_src_dir }}/env/bin/python
-          {{ osp_src_dir }}/osp/producer.py
+          {{ osp_src_dir }}/bin/producer.py
 
       - name: consumer
 
         command: >
           {{ osp_src_dir }}/env/bin/python
-          {{ osp_src_dir }}/osp/consumer.py
+          {{ osp_src_dir }}/bin/consumer.py
 
         numprocs: 4
 
