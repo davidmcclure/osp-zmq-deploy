@@ -5,5 +5,7 @@ osp_branch: master
 
 osp_src_dir: /opt/osp
 
+osp_zmq_host: localhost
+
 osp_config:
-  zmq_host: localhost
+  zmq_host: '{{ osp_zmq_host }}'

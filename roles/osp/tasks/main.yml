@@ -5,3 +5,8 @@
 - include: init_env.yml
 
 - include: deploy_code.yml
+
+- include: set_host.yml
+  when: '"ec2" in group_names'
+
+- include: push_config.yml

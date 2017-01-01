@@ -1,0 +1,13 @@
+---
+
+- name: Get server IP address
+  register: server
+  ec2_remote_facts:
+    region: '{{ ec2_region }}'
+    filters:
+      instance-state-name: running
+      'tag:osp': cluster-server
+
+- name: Set the broker variable
+  set_fact:
+    osp_zmq_host: '{{ server.instances[0].private_dns_name }}'

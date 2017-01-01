@@ -4,7 +4,8 @@
   become: yes
 
   hosts:
-    - tag_osp_cluster-master
+    - tag_osp_cluster-server
+    - tag_osp_cluster-worker
 
   roles:
     - osp
