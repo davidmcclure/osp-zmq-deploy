@@ -9,3 +9,5 @@ osp_zmq_host: localhost
 
 osp_config:
   zmq_host: '{{ osp_zmq_host }}'
+
+osp_procs: []

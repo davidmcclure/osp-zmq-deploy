@@ -7,6 +7,7 @@ dependencies:
     supervisor_programs:
 
       - name: producer
+
         command: >
           {{ osp_src_dir }}/env/bin/python
           {{ osp_src_dir }}/bin/producer.py
@@ -17,7 +18,4 @@ dependencies:
           {{ osp_src_dir }}/env/bin/python
           {{ osp_src_dir }}/bin/consumer.py
 
-        numprocs: 4
-
-        config:
-          autostart: True
+        numprocs: 36

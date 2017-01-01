@@ -10,3 +10,5 @@
   when: '"ec2" in group_names'
 
 - include: push_config.yml
+
+- include: run_procs.yml

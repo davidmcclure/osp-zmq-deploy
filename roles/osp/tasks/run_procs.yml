@@ -1,0 +1,7 @@
+---
+
+- name: Start Supervisor programs
+  supervisorctl:
+    name: '{{ item }}'
+    state: started
+  with_items: '{{ osp_procs }}'
