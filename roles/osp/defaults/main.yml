@@ -1,13 +1,14 @@
 ---
 
 osp_repo: https://github.com/davidmcclure/osp-zmq.git
-osp_branch: master
+osp_branch: feature/jobs
 
 osp_src_dir: /opt/osp
 
-osp_zmq_host: localhost
+osp_master_host: localhost
 
 osp_config:
-  zmq_host: '{{ osp_zmq_host }}'
+  hosts:
+    master: '{{ osp_master_host }}'
 
 osp_procs: []

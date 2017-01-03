@@ -6,16 +6,16 @@ dependencies:
 
     supervisor_programs:
 
-      - name: producer
+      - name: ventilator
 
         command: >
           {{ osp_src_dir }}/env/bin/python
-          {{ osp_src_dir }}/bin/producer.py
+          {{ osp_src_dir }}/bin/parse-warcs-ventilator.py
 
-      - name: consumer
+      - name: worker
 
         command: >
           {{ osp_src_dir }}/env/bin/python
-          {{ osp_src_dir }}/bin/consumer.py
+          {{ osp_src_dir }}/bin/parse-warcs-worker.py
 
-        numprocs: 36
+        numprocs: 4
