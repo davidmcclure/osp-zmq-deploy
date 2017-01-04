@@ -2,5 +2,6 @@
 
 - name: Start cluster process
   supervisorctl:
-    name: '{{ job }}'
+    name: '{{ item }}'
     state: started
+  with_items: '{{ jobs }}'

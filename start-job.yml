@@ -2,16 +2,6 @@
 
 # TODO: Parametrize the job.
 
-- name: Start workers
-  become: yes
-
-  hosts:
-    - tag_osp_cluster-worker
-
-  roles:
-    - role: start-job
-      job: 'worker:'
-
 - name: Start ventilator
   become: yes
 
@@ -20,4 +10,17 @@
 
   roles:
     - role: start-job
-      job: ventilator
+      jobs:
+        - ventilator
+        - sink
+
+- name: Start workers
+  become: yes
+
+  hosts:
+    - tag_osp_cluster-worker
+
+  roles:
+    - role: start-job
+      jobs:
+        - 'worker:'
