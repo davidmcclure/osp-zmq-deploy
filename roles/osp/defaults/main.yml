@@ -10,5 +10,3 @@ osp_master_host: localhost
 osp_config:
   hosts:
     master: '{{ osp_master_host }}'
-
-osp_procs: []

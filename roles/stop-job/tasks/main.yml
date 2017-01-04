@@ -1,0 +1,6 @@
+---
+
+- name: Start Supervisor programs
+  supervisorctl:
+    name: all
+    state: stopped
