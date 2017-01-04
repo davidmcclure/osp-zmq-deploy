@@ -1,7 +1,7 @@
 ---
 
 osp_repo: https://github.com/davidmcclure/osp-zmq.git
-osp_branch: feature/jobs
+osp_branch: feature/sqla
 
 osp_src_dir: /opt/osp
 

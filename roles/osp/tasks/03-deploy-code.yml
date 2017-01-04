@@ -32,3 +32,8 @@
   command: env/bin/python setup.py develop
   args:
     chdir: '{{ osp_src_dir }}'
+
+- name: Initialize database
+  command: env/bin/inv init_db
+  args:
+    chdir: '{{ osp_src_dir }}'
