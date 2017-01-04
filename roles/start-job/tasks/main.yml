@@ -1,6 +1,6 @@
 ---
 
-- name: Start Supervisor programs
+- name: Start cluster process
   supervisorctl:
     name: '{{ job }}'
     state: started

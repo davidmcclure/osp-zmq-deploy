@@ -1,6 +1,9 @@
 ---
 
-- name: Start Supervisor programs
+- name: Stop cluster
   supervisorctl:
-    name: all
+    name: '{{ item }}'
     state: stopped
+  with_items:
+    - ventilator
+    - 'worker:'

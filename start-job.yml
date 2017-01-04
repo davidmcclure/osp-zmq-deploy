@@ -9,7 +9,7 @@
     - tag_osp_cluster-worker
 
   roles:
-    - role: run-job
+    - role: start-job
       job: 'worker:'
 
 - name: Start ventilator
@@ -19,5 +19,5 @@
     - tag_osp_cluster-server
 
   roles:
-    - role: run-job
+    - role: start-job
       job: ventilator
