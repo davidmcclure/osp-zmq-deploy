@@ -1,0 +1,23 @@
+---
+
+# TODO: Parametrize the job.
+
+- name: Start ventilator
+  become: yes
+
+  hosts:
+    - tag_osp_cluster-server
+
+  roles:
+    - role: run-job
+      job: parse-warcs-ventilator
+
+- name: Start workers
+  become: yes
+
+  hosts:
+    - tag_osp_cluster-worker
+
+  roles:
+    - role: run-job
+      job: parse-warcs-worker

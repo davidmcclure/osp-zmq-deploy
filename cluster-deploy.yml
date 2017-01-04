@@ -5,16 +5,7 @@
 
   hosts:
     - tag_osp_cluster-server
-
-  roles:
-    - role: osp
-
-- name: Deploy workers
-  become: yes
-
-  hosts:
     - tag_osp_cluster-worker
 
   roles:
     - role: osp
-      osp_procs: ['consumer:']

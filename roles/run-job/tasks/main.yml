@@ -2,6 +2,5 @@
 
 - name: Start Supervisor programs
   supervisorctl:
-    name: '{{ item }}'
+    name: '{{ job }}'
     state: started
-  with_items: '{{ osp_procs }}'
