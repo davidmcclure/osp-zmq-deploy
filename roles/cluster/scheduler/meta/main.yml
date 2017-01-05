@@ -4,10 +4,9 @@ dependencies:
 
   - role: ec2-instance
 
-    ec2_name: cluster-worker
-    ec2_tag: cluster-worker
+    ec2_name: cluster-scheduler
+    ec2_tag: cluster-scheduler
 
     ec2_instance_type: cc2.8xlarge
-    ec2_instance_count: 0
 
     ec2_group: osp-cluster

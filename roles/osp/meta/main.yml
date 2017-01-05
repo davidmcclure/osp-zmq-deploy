@@ -5,5 +5,5 @@ dependencies:
   - role: common
     tags: common
 
-  - role: osp/roles/supervisor
-    tags: supervisor
+  #- role: osp/roles/supervisor
+    #tags: supervisor

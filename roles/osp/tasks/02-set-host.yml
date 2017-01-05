@@ -17,4 +17,4 @@
 
 - name: Set the broker variable
   set_fact:
-    osp_master_host: '{{ server.instances[0].private_dns_name }}'
+    osp_scheduler_host: '{{ server.instances[0].private_dns_name }}'

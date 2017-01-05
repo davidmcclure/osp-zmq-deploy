@@ -4,16 +4,8 @@ osp_repo: https://github.com/davidmcclure/osp-zmq.git
 osp_branch: feature/dask
 
 osp_src_dir: /opt/osp
-osp_data_dir: /var/osp
 
-osp_master_host: localhost
+osp_scheduler_host: localhost
 
-osp_config:
-
-  database: '{{ osp_data_dir }}/osp.db'
-
-  hosts:
-    master: '{{ osp_master_host }}'
-
-  dirs:
-    text: dask-text
+# TODO
+osp_config: {}

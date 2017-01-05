@@ -1,10 +1,5 @@
 ---
 
-#- name: Create the data directory
-  #file:
-    #path: '{{ osp_data_dir }}'
-    #state: directory
-
 - name: Update the source code
   git:
     repo: '{{ osp_repo }}'
@@ -37,18 +32,3 @@
   command: env/bin/python setup.py develop
   args:
     chdir: '{{ osp_src_dir }}'
-
-#- name: Initialize database
-  #command: env/bin/inv init_db
-  #args:
-    #chdir: '{{ osp_src_dir }}'
-
-#- name: Set data + code permissions
-  #file:
-    #path: '{{ item }}'
-    #group: '{{ ansible_ssh_user }}'
-    #owner: '{{ ansible_ssh_user }}'
-    #recurse: yes
-  #with_items:
-    #- '{{ osp_data_dir }}'
-    #- '{{ osp_src_dir }}'
