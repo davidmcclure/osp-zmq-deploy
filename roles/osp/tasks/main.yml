@@ -1,12 +1,10 @@
 ---
 
-- include: 01-install-deps.yml
-
-- include: 02-init-env.yml
-
-- include: 03-deploy-code.yml
-
-- include: 04-set-host.yml
+- include: 01-set-host.yml
   when: '"ec2" in group_names'
 
-- include: 05-push-config.yml
+- include: 02-install-deps.yml
+
+- include: 03-push-config.yml
+
+- include: 04-deploy-code.yml

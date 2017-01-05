@@ -8,5 +8,8 @@ osp_src_dir: /opt/osp
 osp_master_host: localhost
 
 osp_config:
+
+  database: /var/osp.db
+
   hosts:
     master: '{{ osp_master_host }}'

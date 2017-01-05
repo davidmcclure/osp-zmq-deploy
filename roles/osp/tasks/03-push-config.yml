@@ -1,5 +1,12 @@
 ---
 
+- include_vars: boto.vault.yml
+
+- name: Push the boto credentials
+  template:
+    src: boto.cfg.j2
+    dest: /etc/boto.cfg
+
 - name: Create the OSP config directory
   file:
     path: /etc/osp
@@ -7,7 +14,7 @@
     owner: '{{ ansible_ssh_user }}'
     state: directory
 
-- name: Push the OSP configs
+- name: Push the OSP config
   template:
     src: '{{ item }}.yml.j2'
     dest: /etc/osp/{{ item }}.yml

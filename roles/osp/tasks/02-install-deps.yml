@@ -1,6 +1,7 @@
 ---
 
 - name: Install system dependencies
+  become: yes
   apt:
     pkg: '{{ item }}'
     update_cache: yes
