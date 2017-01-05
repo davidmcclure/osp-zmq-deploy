@@ -1,11 +1,11 @@
 ---
 
-- name: Provision master node
+- name: Provision a cluster
   hosts: localhost
 
   vars_files:
     - vars/ec2.vault.yml
 
   roles:
-    - cluster/server
+    - cluster/scheduler
     - cluster/worker

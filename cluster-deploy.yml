@@ -1,10 +1,10 @@
 ---
 
-- name: Deploy the master
+- name: Configure the cluster
   become: yes
 
   hosts:
-    - tag_osp_cluster-server
+    - tag_osp_cluster-scheduler
     - tag_osp_cluster-worker
 
   roles:
