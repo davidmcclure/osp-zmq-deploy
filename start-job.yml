@@ -12,7 +12,6 @@
     - role: start-job
       jobs:
         - ventilator
-        - sink
 
 - name: Start workers
   become: yes

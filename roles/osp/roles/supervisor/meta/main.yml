@@ -3,24 +3,19 @@
 # TODO: Parametrize jobs.
 # TODO: Set worker count in app.
 
-dependencies:
+#dependencies:
 
-  - role: supervisor
+  #- role: supervisor
 
-    supervisor_programs:
+    #supervisor_programs:
 
-      - name: ventilator
-        command: >
-          {{ osp_src_dir }}/env/bin/python
-          {{ osp_src_dir }}/bin/parse-warcs-ventilator.py
+      #- name: ventilator
+        #command: >
+          #{{ osp_src_dir }}/env/bin/python
+          #{{ osp_src_dir }}/bin/parse-warcs-ventilator.py
 
-      - name: sink
-        command: >
-          {{ osp_src_dir }}/env/bin/python
-          {{ osp_src_dir }}/bin/parse-warcs-sink.py
-
-      - name: worker
-        command: >
-          {{ osp_src_dir }}/env/bin/python
-          {{ osp_src_dir }}/bin/parse-warcs-worker.py
-        numprocs: 4
+      #- name: worker
+        #command: >
+          #{{ osp_src_dir }}/env/bin/python
+          #{{ osp_src_dir }}/bin/parse-warcs-worker.py
+        #numprocs: 4
