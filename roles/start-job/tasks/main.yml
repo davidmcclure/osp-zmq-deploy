@@ -1,7 +1,0 @@
----
-
-- name: Start cluster process
-  supervisorctl:
-    name: '{{ item }}'
-    state: started
-  with_items: '{{ jobs }}'

@@ -1,9 +1,0 @@
----
-
-- name: Stop cluster
-  supervisorctl:
-    name: '{{ item }}'
-    state: stopped
-  with_items:
-    - ventilator
-    - 'worker:'
