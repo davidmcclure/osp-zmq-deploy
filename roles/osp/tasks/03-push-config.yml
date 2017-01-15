@@ -1,6 +1,0 @@
----
-
-- name: Push the OSP .env
-  template:
-    src: env.j2
-    dest: '{{osp_src_dir}}/.env'
