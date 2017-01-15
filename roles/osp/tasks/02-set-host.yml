@@ -1,7 +1,5 @@
 ---
 
-- include_vars: boto.vault.yml
-
 - name: Push the boto credentials
   template:
     src: boto.cfg.j2

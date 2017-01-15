@@ -1,15 +1,6 @@
 ---
 
-- name: Create the OSP config directory
-  file:
-    path: /etc/osp
-    group: '{{ ansible_ssh_user }}'
-    owner: '{{ ansible_ssh_user }}'
-    state: directory
-
-- name: Push the OSP config
+- name: Push the OSP .env
   template:
-    src: '{{ item }}.yml.j2'
-    dest: /etc/osp/{{ item }}.yml
-  with_items:
-    - osp
+    src: env.j2
+    dest: '{{osp_src_dir}}/.env'

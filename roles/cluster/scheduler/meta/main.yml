@@ -7,6 +7,6 @@ dependencies:
     ec2_name: cluster-scheduler
     ec2_tag: cluster-scheduler
 
-    ec2_instance_type: cc2.8xlarge
+    ec2_instance_type: c4.xlarge
 
     ec2_group: osp-cluster
