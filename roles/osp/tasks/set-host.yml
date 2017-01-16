@@ -15,5 +15,5 @@
 
 - name: Set the broker variable
   set_fact:
-    osp_scheduler_host: >
+    osp_scheduler_host: >-
       {{ scheduler.instances[0].private_dns_name }}

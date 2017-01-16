@@ -1,0 +1,16 @@
+---
+
+dependencies:
+
+  - role: supervisor
+
+    supervisor_programs:
+
+      - name: worker
+
+        command: >
+          {{ osp_src_dir }}/env/bin/dask-worker
+          {{ osp_scheduler_host }}:{{ osp_scheduler_port }}
+
+        config:
+          autostart: true

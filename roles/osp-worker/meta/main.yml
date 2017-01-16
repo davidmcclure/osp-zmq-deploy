@@ -1,0 +1,9 @@
+---
+
+dependencies:
+
+  - role: osp
+    tags: osp
+
+  - role: osp-worker/roles/supervisor
+    tags: supervisor

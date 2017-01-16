@@ -6,3 +6,4 @@ osp_branch: feature/dask
 osp_src_dir: /opt/osp
 
 osp_scheduler_host: localhost
+osp_scheduler_port: 5557

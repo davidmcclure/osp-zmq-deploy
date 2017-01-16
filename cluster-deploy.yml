@@ -1,11 +1,19 @@
 ---
 
-- name: Configure the cluster
+- name: Configure scheduler
   become: yes
 
   hosts:
     - tag_osp_cluster-scheduler
+
+  roles:
+    - role: osp-scheduler
+
+- name: Configure workers
+  become: yes
+
+  hosts:
     - tag_osp_cluster-worker
 
   roles:
-    - role: osp
+    - role: osp-worker
