@@ -1,5 +1,10 @@
 ---
 
+- name: Create the data directory
+  file:
+    path: '{{ osp_data_dir }}'
+    state: directory
+
 - name: Update the source code
   git:
     repo: '{{ osp_repo }}'
@@ -37,3 +42,15 @@
   template:
     src: env.j2
     dest: '{{ osp_src_dir }}/.env'
+
+- name: Initialize database
+  command: env/bin/inv init_db
+  args:
+    chdir: '{{ osp_src_dir }}'
+
+- name: Set data permissions
+  file:
+    path: '{{ osp_data_dir }}'
+    group: '{{ ansible_ssh_user }}'
+    owner: '{{ ansible_ssh_user }}'
+    recurse: yes
