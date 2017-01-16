@@ -11,6 +11,8 @@ dependencies:
         command: >
           {{ osp_src_dir }}/env/bin/dask-worker
           {{ osp_scheduler_host }}:{{ osp_scheduler_port }}
+          --nprocs {{ ansible_processor_vcpus }}
+          --nthreads 1
 
         config:
           autostart: true
