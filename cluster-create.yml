@@ -3,9 +3,6 @@
 - name: Provision a cluster
   hosts: localhost
 
-  vars_files:
-    - vars/ec2.vault.yml
-
   roles:
     - cluster/scheduler
     - cluster/worker
